@@ -3,16 +3,14 @@
 
 
 
-# Vulnerability Management Lab with OpenVAS
+# Vulnerability Management
 
-**Summary and Purpose**  
+**Summary**  
 In this project, we will create a secure Azure network and populate it with two virtual machines: one running the OpenVAS Vulnerability Management Scanner and the other running Windows 10. To demonstrate the importance of proper configuration for vulnerability scans, the Windows 10 virtual machine was intentionally made vulnerable by disabling security controls and installing outdated software.
 
 Two types of scans were conducted to illustrate this point. First, an unauthenticated scan was performed on the Windows 10 machine. After completing the unauthenticated scan, a credentialed scan was configured and initiated. Based on the results of the credentialed scan, remediation steps were implemented to address critical vulnerabilities.
 
-
 ---
-
 
 ## Lab Architecture
 
@@ -35,16 +33,17 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 > **Result:** Severity max **5.0 (Medium)**, outdated apps **not detected**—a stark reminder of how little an unauthenticated probe can see.
 
-## Deploy Resources and Configure Virtual Machines for an Unauthenticated Scan
+### Deploy Resources and Configure Virtual Machines 
+🛠️ Environment Setup
+The first resource deployed was the OpenVAS Vulnerability Management Scanner, using the HOSSTED image with the default developer configuration. While OpenVAS was initializing, a Windows 10 Pro virtual machine was also provisioned.
 
-The first resource created in this project was the OpenVAS Vulnerability Management Scanner. Specifically, OpenVas by HOSSTED was utilized with a default developer configuration. While OpenVAS was installed, a Windows 10 Pro virtual machine was created.
-To prepare the Windows 10 machine, the firewall was turned off, and outdated versions of Firefox, VLC Media Player, and Adobe Reader were installed. The goal was for the Windows 10 machine to be blatantly vulnerable. Once the firewall was disabled and the vulnerable software was installed, the machine was restarted.
-To configure OpenVAS for an unauthenticated scan, the following steps were completed:
+
+
+This configuration ensured the system was exposed to a variety of known CVEs.
 > 1. A new host was created using the Windows 10 virtual machine's private IP Address.
 
 <img src="https://github.com/user-attachments/assets/0807411f-de83-400e-88c8-9268f5e99cc7" width="70%" />
 
-<img src="https://github.com/user-attachments/assets/9930096d-42cd-439c-b8ec-991d8500078e" width="70%" />
 
 > 2. A new target was created using the host from the previous step. All other configurations were left as default, and no credentials were provided to OpenVAS.
 <img src="https://github.com/user-attachments/assets/9ed25b15-b9b0-4969-8326-9c25c86508a0" width="50%" />
