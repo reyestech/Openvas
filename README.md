@@ -13,7 +13,6 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 ---
 
-<!-- img1 -->
 
 ## 1 — Lab Architecture
 
@@ -38,7 +37,6 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 ---
 
-<!-- img3 -->
 
 ## 3 — Preparing for a Credentialed Scan
 
@@ -60,56 +58,6 @@ Clone target → attach SMB creds.
 
 Clone task → point to credentialed target.
 
-<!-- img4 -->
-4 — Credentialed Scan Results
-Metric	Unauth Scan	Credentialed Scan
-Max severity	5.0 (Medium)	10.0 (High)
-Total vulns	16	123 (+107)
 
-OpenVAS now reports CVEs for Firefox, VLC, and Adobe Reader, complete with scores, vectors, references, and remediation guidance.
-
-<!-- img5 -->
-5 — Remediation & Verification
-Action: Uninstalled all outdated software.
-Follow-up credentialed scan: Vulnerability count dropped by 91; high-severity items fell sharply.
-
-<!-- img6 -->
-6 — Key Takeaways
-Credentialed > Unauthenticated: credentials unlock deep file-system & registry checks.
-
-Quick wins matter: removing three legacy apps cut >70 % of findings.
-
-Scan-fix-rescan is essential—never assume remediation worked until verification.
-
-7 — Tech & Standards
-Azure: VNet, VMs, NSGs
-
-OpenVAS (GVM): v22.x, default developer template
-
-Windows 10 Pro: 22H2 (baseline)
-
-Regulations referenced: NIST 800-53 (SI-2, CM-8), CIS Benchmark concepts, CVSS v3.1 scoring
-
-8 — Next Steps
-Re-create the lab with Tenable Nessus for tooling comparison
-
-Spin up Qualys Vulnerability Management in a new resource group
-
-Build a mini Active Directory environment and scan domain controllers
-
-9 — Author Reflection
-“This lab deepened my vulnerability-management skills and highlighted the power of credentialed scans. I’m planning follow-ups with Nessus and Qualys to broaden my toolset.”
-— Hector M. Reyes
-
-
----
-
-### How to use
-
-1. Copy everything between the ```markdown fences into your `README.md`.  
-2. Replace each `<!-- img# -->` comment with the matching image line from your current README.  
-3. Commit & push—your repo now has a professional, skimmable portfolio piece.  
-
-Let me know if you’d like any tweaks!
 
 
