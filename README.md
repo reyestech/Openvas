@@ -103,6 +103,8 @@ To remediate most of the vulnerabilities found during the credentialed scan, the
 Based on the scan, the remediations succeeded, and a downward vulnerability trend was shown. By removing the outdated software, the number of vulnerabilities found by OpenVAS was reduced by 91. 
 
 This project successfully demonstrated the configuration of OpenVAS and the subsequent remediation of vulnerabilities. The project also explained the importance of conducting credentialed scans when possible, as an unauthenticated scan does not accurately reflect the security of a system. Even though additional high-severity vulnerabilities remained on the verification scan, remediating those vulnerabilities was not within this project's scope.
+
+
 <img src="https://github.com/user-attachments/assets/497ff3df-817d-403f-b299-671df94c1507" width="70%" />
 
 <img src="https://github.com/user-attachments/assets/38356b9a-7e42-4cf3-ae7d-ce4ac8145df7" width="70%" />
