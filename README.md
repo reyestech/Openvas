@@ -5,7 +5,7 @@
 
 # Vulnerability Management
 
-**Summary**  
+**Intro**  
 In this project, we will create a secure Azure network and populate it with two virtual machines: one running the OpenVAS Vulnerability Management Scanner and the other running Windows 10. To demonstrate the importance of proper configuration for vulnerability scans, the Windows 10 virtual machine was intentionally made vulnerable by disabling security controls and installing outdated software.
 
 Two types of scans were conducted to illustrate this point. First, an unauthenticated scan was performed on the Windows 10 machine. After completing the unauthenticated scan, a credentialed scan was configured and initiated. Based on the results of the credentialed scan, remediation steps were implemented to address critical vulnerabilities.
@@ -97,7 +97,6 @@ The credentialed scan enabled OpenVAS to conduct a thorough evaluation of the sy
 
 <img src="https://github.com/user-attachments/assets/38356b9a-7e42-4cf3-ae7d-ce4ac8145df7" width="70%" />
 
-
 ## Remediation, 
 
 ### Verification
@@ -111,15 +110,17 @@ This project successfully demonstrated the configuration of OpenVAS and the subs
 
 <img src="https://github.com/user-attachments/assets/38356b9a-7e42-4cf3-ae7d-ce4ac8145df7" width="70%" />
 
-## Reflection
+## **Reflection**
 
 This project provided us with valuable hands-on experience in vulnerability management, from initial scanner setup to remediation and verification. It deepened my understanding of the differences between authenticated and unauthenticated scans in terms of accuracy and scope, and reinforced the importance of credentialed access when assessing real-world risks.
 
 OpenVAS was the second vulnerability management suite we've worked with, following Tenable Nessus. Each tool has broadened my technical perspective and sharpened my ability to evaluate system exposures across different environments.
+
 Looking ahead, I plan to build out additional labs, including:
-A Qualys Vulnerability Management environment for enterprise-level comparisons
-A refreshed Tenable Nessus lab with new threat scenarios
-A mini Active Directory lab to explore domain-based attack surfaces and vulnerability scanning in directory-integrated networks
+1. A Qualys Vulnerability Management environment for enterprise-level comparisons
+2. A refreshed Tenable Nessus lab with new threat scenarios
+3. A mini Active Directory lab to explore domain-based attack surfaces and vulnerability scanning in directory-integrated networks
+
 These experiences are part of my ongoing effort to strengthen my cybersecurity skill set through applied learning and real-world tools.
 
 
