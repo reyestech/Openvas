@@ -17,7 +17,7 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 | Component | Purpose |
 |-----------|---------|
 | **Azure VNet**           | Isolated network to host lab assets |
-| **OpenVAS VM**           | Vulnerability Management Scanner (HOSSTED image, default “developer” config) |
+| **OpenVAS VM**           | Vulnerability Management Scanner (HOSSTED image, default "developer" config) |
 | **Windows 10 Pro VM**    | Target machine; firewall disabled + outdated software installed |
 | **Outdated software**    | *Firefox 97.0b5, VLC 1.1.7, Adobe Reader 10.0.0* (chosen for known CVEs) |
 
@@ -25,7 +25,7 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 ## Unauthenticated Scan
 
-1. **Add host** → Windows 10 VM’s private IP.  
+1. **Add host** → Windows 10 VM's private IP.  
 2. **Create target** → default settings, **no credentials**.  
 3. **Create task** → run scan.
 
@@ -35,7 +35,7 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 The first resource created for this project was the OpenVAS Vulnerability Management Scanner. Specifically, OpenVAS by HOSSTED was utilized with its default developer configuration. While OpenVAS was installed, a Windows 10 Pro virtual machine was set up.
 
-The firewall was turned off to prepare the Windows 10 machine, and outdated versions of Firefox, VLC Media Player, and Adobe Reader were installed. The goal was to make the Windows 10 machine intentionally vulnerable. The machine was restarted after turning off the firewall and installing the vulnerable software.
+The firewall was turned off to prepare the Windows 10 machine, and outdated versions of Firefox, VLC Media Player, and Adobe Reader were installed. The goal was to make the Windows 10 machine intentionally vulnerable. The machine was restarted after the firewall was turned off and the vulnerable software was installed.
 
 Environment Setup
 > 1. **Add host** → Windows 10 VM’s private IP.  
@@ -77,7 +77,7 @@ Several changes were required to configure the Windows 10 machine for a credenti
 ## Credentialed Scan: OpenVAS Configuration
 
 While the Windows 10 machine restarted, the following steps were completed to configure OpenVAS for a credentialed scan:
-> 1. Create a new credential by providing the Windows 10 virtual machine's username and password to OpenVAS.  
+> 1. Create a new credential by providing the username and password for the Windows 10 virtual machine to OpenVAS.  
 <img src="https://github.com/user-attachments/assets/031e8bd0-16c8-4a6d-81d1-0ddebeaeacc6" width="60%" />
 
 > 2. Clone the existing target by clicking the sheep icon under "Actions." Edit the cloned target and enable SMB by selecting the credentials created in the previous step.  
@@ -101,7 +101,7 @@ The credentialed scan enabled OpenVAS to conduct a thorough evaluation of the sy
 ## Remediation, 
 
 ### Verification
-To address the vulnerabilities identified during the credentialed scan, we uninstalled the outdated software from the Windows 10 machine. After implementing these changes, we conducted another credentialed scan to verify whether the remediations resolved the identified vulnerabilities effectively.
+To address the vulnerabilities identified during the credentialed scan, we uninstalled the outdated software from the Windows 10 machine. After implementing these changes, we conducted another credentialed scan to verify whether the remediations effectively resolved the identified vulnerabilities.
 
 The results of the follow-up scan indicated that the remediations were successful, showing a downward trend in vulnerabilities. Specifically, by removing the outdated software, we reduced the number of vulnerabilities detected by OpenVAS by 91%.
 
@@ -113,9 +113,9 @@ This project successfully demonstrated the configuration of OpenVAS and the subs
 
 ## Reflection
 
-This project provided us with valuable hands-on experience in vulnerability management, from initial scanner setup to remediation and verification. It deepened my understanding of how authenticated vs. unauthenticated scans differ in accuracy and scope, and reinforced the importance of credentialed access when assessing real-world risks.
+This project provided us with valuable hands-on experience in vulnerability management, from initial scanner setup to remediation and verification. It deepened my understanding of the differences between authenticated and unauthenticated scans in terms of accuracy and scope, and reinforced the importance of credentialed access when assessing real-world risks.
 
-OpenVAS was the second vulnerability management suite we’ve worked with, following Tenable Nessus. Each tool has broadened my technical perspective and sharpened my ability to evaluate system exposures across different environments.
+OpenVAS was the second vulnerability management suite we've worked with, following Tenable Nessus. Each tool has broadened my technical perspective and sharpened my ability to evaluate system exposures across different environments.
 Looking ahead, I plan to build out additional labs, including:
 A Qualys Vulnerability Management environment for enterprise-level comparisons
 A refreshed Tenable Nessus lab with new threat scenarios
