@@ -33,6 +33,8 @@ Two types of scans were conducted to illustrate this point. First, an unauthenti
 
 > **Result:** Severity max **5.0 (Medium)**, outdated apps **not detected**—a stark reminder of how little an unauthenticated probe can see.
 
+---
+
 ### Deploy Resources and Configure Virtual Machines 
 
 The first resource created for this project was the OpenVAS Vulnerability Management Scanner. Specifically, OpenVAS by HOSSTED was utilized with its default developer configuration. While OpenVAS was installed, a Windows 10 Pro virtual machine was set up.
@@ -46,6 +48,8 @@ Environment Setup
 
 > **Result:** Severity max **5.0 (Medium)**, outdated apps **not detected**—a stark reminder of how little an unauthenticated probe can see.
 
+---
+
 Conduct an unauthenticated scan in OpenVAS:
 > 1.  A new host was created using the private IP address of the Windows 10 virtual machine.
 
@@ -57,10 +61,14 @@ Conduct an unauthenticated scan in OpenVAS:
 > 3. The task was initiated using the previously defined target, retaining the default configurations to simulate a basic unauthenticated scan.
 <img src="https://github.com/user-attachments/assets/d5892731-adc7-4ef3-8611-2a48ba9b746c" width="70%" />
 
+---
+
 ## Unauthenticated Scan  Results
 
 Due to the scan being unauthenticated, the vulnerabilities found do not accurately reflect the vulnerabilities on the machine. The outdated software on the virtual machine is not reflected in this scan due to the limited capabilities inherent in unauthenticated scans. 
 <img src="https://github.com/user-attachments/assets/9db2448b-052e-4445-a2e0-763c4898eed5" width="70%" />
+
+---
 
 ## Credentialed Scan: Windows 10 Configuration
 
@@ -76,6 +84,8 @@ Several changes were required to configure the Windows 10 machine for a credenti
 
 > •	Restart the virtual machine.
 
+---
+
 ## Credentialed Scan: OpenVAS Configuration
 
 While the Windows 10 machine restarted, the following steps were completed to configure OpenVAS for a credentialed scan:
@@ -87,6 +97,8 @@ While the Windows 10 machine restarted, the following steps were completed to co
 
 > 3. Clone the existing task and edit the clone to use the credentialed target created in the previous step.  
 <img src="https://github.com/user-attachments/assets/0239dee5-7691-45fd-a3c5-e7a87d508ef4" width="60%" />
+
+---
 
 ## Credentialed Scan Results
 
