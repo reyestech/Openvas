@@ -1,7 +1,9 @@
-# Openvas
+
 ![image](https://github.com/user-attachments/assets/e67ff0d6-4773-4f23-a6f8-6ed0e49b3cfc)
 
+---
 
+# Openvas
 
 # Vulnerability Management
 
@@ -86,7 +88,6 @@ While the Windows 10 machine restarted, the following steps were completed to co
 > 3. Clone the existing task and edit the clone to use the credentialed target created in the previous step.  
 <img src="https://github.com/user-attachments/assets/0239dee5-7691-45fd-a3c5-e7a87d508ef4" width="60%" />
 
-
 ## Credentialed Scan Results
 
 The difference in vulnerabilities identified during unauthenticated and credentialed scans is significant. The severity rating increased from 5.0 (medium) to 10.0 (high), and the credentialed scan uncovered 107 vulnerabilities.
@@ -96,6 +97,8 @@ The credentialed scan enabled OpenVAS to conduct a thorough evaluation of the sy
 <img src="https://github.com/user-attachments/assets/497ff3df-817d-403f-b299-671df94c1507" width="70%" />
 
 <img src="https://github.com/user-attachments/assets/38356b9a-7e42-4cf3-ae7d-ce4ac8145df7" width="70%" />
+
+---
 
 ## Remediation, 
 
@@ -110,6 +113,8 @@ This project successfully demonstrated the configuration of OpenVAS and the subs
 
 <img src="https://github.com/user-attachments/assets/38356b9a-7e42-4cf3-ae7d-ce4ac8145df7" width="70%" />
 
+---
+
 ## **Reflection**
 
 This project provided us with valuable hands-on experience in vulnerability management, from initial scanner setup to remediation and verification. It deepened my understanding of the differences between authenticated and unauthenticated scans in terms of accuracy and scope, and reinforced the importance of credentialed access when assessing real-world risks.
@@ -122,7 +127,6 @@ Looking ahead, I plan to build out additional labs, including:
 3. A mini Active Directory lab to explore domain-based attack surfaces and vulnerability scanning in directory-integrated networks
 
 These experiences are part of my ongoing effort to strengthen my cybersecurity skill set through applied learning and real-world tools.
-
 
 ![image](https://github.com/user-attachments/assets/02c78df2-8843-488e-84fd-786737e5005c)
 
