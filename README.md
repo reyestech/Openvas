@@ -55,7 +55,7 @@ Conduct an unauthenticated scan in OpenVAS:
 
 <img src="https://github.com/user-attachments/assets/0807411f-de83-400e-88c8-9268f5e99cc7" width="70%" />
 
-> 2. The target was defined and linked to the created host, with all settings left as default and no credentials provided.
+2. The target was defined and linked to the created host, with all settings left at their default values and no credentials provided.
 <img src="https://github.com/user-attachments/assets/9ed25b15-b9b0-4969-8326-9c25c86508a0" width="50%" />
 
 > 3. The task was initiated using the previously defined target, retaining the default configurations to simulate a basic unauthenticated scan.
