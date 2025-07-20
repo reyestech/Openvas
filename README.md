@@ -56,9 +56,11 @@ Conduct an unauthenticated scan in OpenVAS:
 <img src="https://github.com/user-attachments/assets/0807411f-de83-400e-88c8-9268f5e99cc7" width="70%" />
 
 2. The target was defined and linked to the created host, with all settings left at their default values and no credentials provided.
+
 <img src="https://github.com/user-attachments/assets/9ed25b15-b9b0-4969-8326-9c25c86508a0" width="50%" />
 
 > 3. The task was initiated using the previously defined target, retaining the default configurations to simulate a basic unauthenticated scan.
+
 <img src="https://github.com/user-attachments/assets/d5892731-adc7-4ef3-8611-2a48ba9b746c" width="70%" />
 
 ---
@@ -66,6 +68,7 @@ Conduct an unauthenticated scan in OpenVAS:
 ## Unauthenticated Scan  Results
 
 Due to the scan being unauthenticated, the vulnerabilities found do not accurately reflect the vulnerabilities on the machine. The outdated software on the virtual machine is not reflected in this scan due to the limited capabilities inherent in unauthenticated scans. 
+
 <img src="https://github.com/user-attachments/assets/9db2448b-052e-4445-a2e0-763c4898eed5" width="70%" />
 
 ---
@@ -74,12 +77,15 @@ Due to the scan being unauthenticated, the vulnerabilities found do not accurate
 
 Several changes were required to configure the Windows 10 machine for a credentialed scan. The first step was to verify that the Domain, Private, and Public profiles for Windows Firewall were still disabled from the initial configuration. The following steps were then completed:
 > • Disabled User Account Control (UAC).
+
 <img src="https://github.com/user-attachments/assets/6bd79514-6f7d-470f-936e-3bfdd5fb371e" width="70%" />
 
-> • Enable Remote Registry.  
+> • Enable Remote Registry.
+
 <img src="https://github.com/user-attachments/assets/a68ff251-6e8e-46a5-85bd-8d3b841fb966" width="70%" />
 
-> • Navigate to the Windows Registry and create a new DWORD named `"LocalAccountTokenFilterPolicy"` and set the value to `"1"`.  
+> • Navigate to the Windows Registry and create a new DWORD named `"LocalAccountTokenFilterPolicy"` and set the value to `"1"`.
+
 <img src="https://github.com/user-attachments/assets/cdca25bf-e429-47bf-8ced-3694c7bcf892" width="70%" />
 
 > •	Restart the virtual machine.
@@ -89,13 +95,16 @@ Several changes were required to configure the Windows 10 machine for a credenti
 ## Credentialed Scan: OpenVAS Configuration
 
 While the Windows 10 machine restarted, the following steps were completed to configure OpenVAS for a credentialed scan:
-> 1. Create a new credential by providing the username and password for the Windows 10 virtual machine to OpenVAS.  
+> 1. Create a new credential by providing the username and password for the Windows 10 virtual machine to OpenVAS.
+
 <img src="https://github.com/user-attachments/assets/031e8bd0-16c8-4a6d-81d1-0ddebeaeacc6" width="60%" />
 
-> 2. Clone the existing target by clicking the sheep icon under "Actions." Edit the cloned target and enable SMB by selecting the credentials created in the previous step.  
+> 2. Clone the existing target by clicking the sheep icon under "Actions." Edit the cloned target and enable SMB by selecting the credentials created in the previous step.
+
 <img src="https://github.com/user-attachments/assets/0fb62f61-872d-4dc6-bf56-28585fed7af6" width="60%" />
 
-> 3. Clone the existing task and edit the clone to use the credentialed target created in the previous step.  
+> 3. Clone the existing task and edit the clone to use the credentialed target created in the previous step.
+
 <img src="https://github.com/user-attachments/assets/0239dee5-7691-45fd-a3c5-e7a87d508ef4" width="60%" />
 
 ---
